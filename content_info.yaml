@@ -1,0 +1,21 @@
+authors:
+    - Musharraf:
+        display: Musharraf Omer
+        description: "Musharraf is the founder of Blind Pandas Team and the lead developer of Bookworm, the universally accessible document reader."
+        twitter_handle: mush42
+        image: static/images/authors/musharraf.jpg
+featured:
+    - 100% Accessible:
+        url: 
+        icon: fa fa-index
+        text: This is a text
+social:
+    - Twitter:
+        url: https://twitter.com/blindpandas/
+        icon: twitter fab
+    - GitHub:
+        url: https://github.com/blindpandas/bookworm
+        icon: github fab
+    - Mailing List:
+        url: https://groups.io/g/blindpandas-users
+        icon: envelope fa
