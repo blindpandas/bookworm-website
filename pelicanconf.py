@@ -32,10 +32,10 @@ JINJA_GLOBALS = {
 
 
 # Re-map URLs
-ARTICLE_URL = 'blog/{slug}/'
-ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
-ARTICLE_LANG_URL = 'blog/{lang}/{slug}'
-ARTICLE_LANG_SAVE_AS = 'blog/{lang}/{slug}/index.html'
+ARTICLE_URL = 'blog/post/{slug}/'
+ARTICLE_SAVE_AS = 'blog/post/{slug}/index.html'
+ARTICLE_LANG_URL = 'blog/post/{lang}/{slug}'
+ARTICLE_LANG_SAVE_AS = 'blog/post/{lang}/{slug}/index.html'
 AUTHOR_URL = 'blog/author/{slug}.html'
 AUTHOR_SAVE_AS = 'blog/author/{slug}.html'
 CATEGORY_URL = 'blog/category/{slug}.html'
