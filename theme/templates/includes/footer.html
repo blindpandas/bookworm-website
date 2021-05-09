@@ -4,17 +4,17 @@
   <div class="p-2 text-center">
 
     <nav class="nav flex-column flex-sm-row my-2">
-      {% for label, url in MAIN_NAVIGATION_MENU %}
-      <a class="flex-sm-fill nav-link text-light" href="{{ url }}">{{ label }}</a>
+      {% for nav in site.navigation_menu %}
+      <a class="flex-sm-fill nav-link text-light" href="{{ nav.url }}">{{ nav.label }}</a>
       {% endfor %}
     </nav>
 
   <div class="row justify-content-center">
     <div class="col-lg-10 my-3">
-      {% for title, url, icon in SOCIAL_LINKS %}
-      <a class="btn btn-outline-light btn-social mx-1" href="{{ url }}">
-        <i class="fa-fw fa-{{ icon }}"></i>
-        <span class="sr-only">{{ title }}</span>
+      {% for social_item in site.social %}
+      <a class="btn btn-outline-light btn-social mx-1" href="{{ social_item.url }}">
+        <i class="fa-fw fa-{{ social_item.icon }}"></i>
+        <span class="sr-only">{{ social_item.label }}</span>
       </a>
       {% endfor %}
     </div>

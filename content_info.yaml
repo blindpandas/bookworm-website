@@ -1,5 +1,29 @@
+theme_color: #77216F
+navigation_menu:
+    - updates:
+        label: Updates
+        url: updates
+    - download:
+        label: Download
+        url: download
+    - blog:
+        label: Blog
+        url: blog
+hero:
+    image: static/images/logos/logo128x128.png
+    title: Bookworm
+    lead: The universally accessible document reader
+    button:
+        label: Get Bookworm
+        url: download
+twitter:
+    user: blindpandas
+    embed:
+        title: Tweets by Blind Pandas Team
+        width: 500
+        height: 500
 authors:
-    - Musharraf:
+    Musharraf:
         display: Musharraf Omer
         description: "Musharraf is the founder of Blind Pandas Team and the lead developer of Bookworm, the universally accessible document reader."
         twitter_handle: mush42
@@ -10,12 +34,15 @@ featured:
         icon: fa fa-index
         text: This is a text
 social:
-    - Twitter:
+    - twitter:
+        label: Twitter
         url: https://twitter.com/blindpandas/
         icon: twitter fab
-    - GitHub:
+    - github:
+        label: GitHub
         url: https://github.com/blindpandas/bookworm
         icon: github fab
-    - Mailing List:
+    - mailing:
+        label: Mailing List
         url: https://groups.io/g/blindpandas-users
         icon: envelope fa

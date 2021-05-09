@@ -19,7 +19,7 @@
 {% endblock page_header %}
 
 {% block content %}
-{% set author_info = AUTHORS.get(article.author |string) %}
+{% set author_info = site.authors.get(article.author |string) %}
 <article>
   <!-- Page Header-->
   <header class="mt-4">

@@ -10,9 +10,9 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        {% for label, slug in MAIN_NAVIGATION_MENU %}
+        {% for nav in site.navigation_menu %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ SITEURL }}/{{ slug }}">{{ label }}</a>
+          <a class="nav-link" href="{{ nav.url }}">{{ nav.label }}</a>
         </li>
       {% endfor %}
       </ul>

@@ -68,6 +68,6 @@ venv.bak/
 Thumbs.db
 
 # Pelican Stuff
-static/images/
+content/static/images/
 output/
 seo_report.html

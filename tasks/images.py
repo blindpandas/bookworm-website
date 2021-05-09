@@ -28,6 +28,7 @@ LOGOS_DST = IMAGES_SRC / 'logos'
 LOGOS_COLORS = {
     'blindpandas': ('#325d88', '#AEA79F'),
     'bookworm': ('#77216F', '#AEA79F'),
+    'logo': ('#77216F', '#AEA79F'),
 }
 FOLDERS_TO_COPY_FROM = {
     LOGOS_DST.name,
