@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md {% if nav_light %}navbar-light{% else %}navbar-dark bg-bookworm{% endif %}">
   <div class="container">
-    <a class="navbar-brand mx-md-3" href="{{ SITEURL }}">
-      <img src="{{ SITEURL }}/static/images/logo32x32.png" alt="">
-      <span class="ml-1">{{ SITENAME }}</span>
+    <a class="navbar-brand mx-md-4" href="{{ SITEURL }}">
+      <img src="{{ SITEURL }}/static/images/logos/logo32x32.png" alt="">
+      <span class="ml-3">{{ SITENAME }}</span>
       </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,8 +11,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         {% for nav in site.navigation_menu %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ nav.url }}">{{ nav.label }}</a>
+        {% if page %}
+        {% set current = page.slug == nav.url.strip("/") %}
+        {% elif (output_file == "index.html") and (nav.url == "/") %}
+        {% set current = True %}
+        {% else %}
+        {% set current = False %}
+        {% endif %}
+        <li class="nav-item {% if current %}active{% endif %}">
+          <a class="nav-link" href="{{ nav.url| absolute_url }}" {% if current %}aria-current="page"{% endif %}>{{ nav.label }}</a>
         </li>
       {% endfor %}
       </ul>

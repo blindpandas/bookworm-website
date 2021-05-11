@@ -1,48 +1,65 @@
-theme_color: #77216F
+theme_color: #590351
 navigation_menu:
-    - updates:
-        label: Updates
-        url: updates
-    - download:
-        label: Download
-        url: download
-    - blog:
-        label: Blog
-        url: blog
+  - label: Home
+    url: /
+  - label: Download
+    url: download
+  - label: Blog
+    url: blog
 hero:
-    image: static/images/logos/logo128x128.png
-    title: Bookworm
-    lead: The universally accessible document reader
-    button:
-        label: Get Bookworm
-        url: download
-twitter:
-    user: blindpandas
-    embed:
-        title: Tweets by Blind Pandas Team
-        width: 500
-        height: 500
-authors:
-    Musharraf:
-        display: Musharraf Omer
-        description: "Musharraf is the founder of Blind Pandas Team and the lead developer of Bookworm, the universally accessible document reader."
-        twitter_handle: mush42
-        image: static/images/authors/musharraf.jpg
+  image:
+    src: static/images/logos/logo128x128.png
+    alt: "Bookworm's logo: a white icon representing an open book with a candle underneath all in a dark purple circle."
+  title: Bookworm
+  lead: The universally accessible document reader
+  button:
+    label: Get Bookworm
+    url: download
+intro:
+  left_column_text: |
+    Bookworm is a document reader that allows you to read PDF, EPUB, MOBI, and many other document formats using a versatile, yet simple, and highly accessible interface.
+    Bookworm provides you with a rich set of tools for reading your documents. You can search the document, bookmark and highlight interesting content, use text-to-speech, and convert scanned documents to plain text using Optical Character Recgonition (OCR).
+  right_column_text: |
+    Bookworm is  a free and open-source application for the Windows operating system. It works well with your favorite screen reader such as NVDA and JAWS. Even if no screen reader is active, Bookworm can function as a self-voicing application using its builtin text-to-speech features.
+    Bookworm is being developed by <a href="https://blindpandas.com/">Blind Pandas Team</a>.
 featured:
-    - 100% Accessible:
-        url: 
-        icon: fa fa-index
-        text: This is a text
+  - title: Ubiquitous & Versatile
+    icon: fa fa-boxes
+    text: Bookworm supports most of the documents formats you may encounter, and it allows you to read them in a simple, versatile interface.
+  - title: 100% Accessible
+    icon: fab fa-accessible-icon
+    text: Bookworm is accessible by design. Every feature of the application is crafted to be accessible and easy to use using assistive technologies.
+  - title: Fully Featured
+    icon: fa fa-gifts
+    text: Out of the box, Bookworm comes with  Text-to-speech, Optical Character Recognition (OCR), article extractor, Wikipedia integration, and more...
+  - title: Annotations
+    icon: fa fa-bookmark
+    text: Do not only read documents, interact with them. That's why Bookworm allows you to bookmark, highlight, and take notes.
+  - title: Modern
+    icon: fa fa-clock
+    text: Bookworm offers you the reading experience you expect from a modern document reader. Adaptive technologies should be simple not simplistic.
+  - title: Free & Open-source
+    icon: fa fa-laptop-code
+    text: Bookworm is a free and open-source application. You can run it, modify it, and learn from it without restrictions.
+twitter:
+  user: blindpandas
+  embed:
+    title: Tweets by Blind Pandas Team
+    width: 500
+    height: 500
+authors:
+  Musharraf:
+    display: Musharraf Omer
+    description: "Musharraf is the founder of Blind Pandas Team and the lead developer of Bookworm, the universally accessible document reader."
+    twitter_handle: mush42
+    image: static/images/authors/musharraf.jpg
 social:
-    - twitter:
-        label: Twitter
-        url: https://twitter.com/blindpandas/
-        icon: twitter fab
-    - github:
-        label: GitHub
-        url: https://github.com/blindpandas/bookworm
-        icon: github fab
-    - mailing:
-        label: Mailing List
-        url: https://groups.io/g/blindpandas-users
-        icon: envelope fa
+  - label: Twitter
+    url: https://twitter.com/blindpandas/
+    icon: twitter fab
+  - label: GitHub
+    url: https://github.com/blindpandas/bookworm
+    icon: github fab
+  - label: Mailing List
+    url: https://groups.io/g/bookworm-users
+    icon: envelope fa

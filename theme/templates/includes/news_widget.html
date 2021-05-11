@@ -1,9 +1,10 @@
+{% set twitter = site.twitter %}
 <div class="container-fluid">
   <div class="row p-1 p-md-2">
     <div class="col-md-4 col-sm-12 offset-md-1">
       <h3 class="h2 font-weight-light mt-5 mb-3">Latest News</h3>
       <ul class="list-unstyled m-1 m-md-3">
-      {% for article in dates[:10]| selectattr("category", "eq", "news") %}
+      {% for article in dates[:5]| selectattr("category", "eq", "news") %}
       <li class="media">
         {% if article.image %}
         <img src="{{ article.image }}" class="mr-3 news-image" alt="">
@@ -25,7 +26,7 @@
     </div>
     <div class="col-md-5 offset-md-1">
     <h3 class="h2 font-weight-light mt-6 mb-3">Latest Tweets</h3>
-    <a class="twitter-timeline" data-width="{{ TWITTER_EMBED_WIDTH }}" data-height="{{ TWITTER_EMBED_HEIGHT }}" href="https://twitter.com/{{ TWITTER_USER }}?ref_src=twsrc%5Etfw">{{ TWITTER_EMBED_TITLE }}</a>
+    <a class="twitter-timeline" data-width="{{ twitter.embed.width }}" data-height="{{ twitter.embed.height }}" href="https://twitter.com/{{ twitter.user }}?ref_src=twsrc%5Etfw">{{ twitter.embed.title }}</a>
     </div>
   </div>
 </div>

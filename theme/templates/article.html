@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-{{ article.title }} · {{ SITENAME }} Blog
+{{ article.title }} &middot; {{ SITENAME }} Blog
 {% endblock %}
 
 {% block og %}
@@ -34,7 +34,7 @@
                           <a href="{{ SITEURL }}/{{ article.author.url }}">{{ author_info.display }}</a>
                           on <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
                       </span>
-                      {% include "includes/article_share.html" with context %}
+                      {% include "partials/article/share.html" with context %}
                   </aside>
                 </div>
               </div>
@@ -70,7 +70,7 @@
                   {% endif %}
                 </p>
               </aside>
-              {% include "includes/article_author.html" with context %}
+              {% include "partials/article/author.html" with context %}
               </footer>
               </div>
           </div>

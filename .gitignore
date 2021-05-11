@@ -71,3 +71,6 @@ Thumbs.db
 content/static/images/
 output/
 seo_report.html
+
+# Extras
+release_info.yaml

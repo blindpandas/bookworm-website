@@ -1,12 +1,12 @@
 <aside class="card bg-light text-black p-md-2 m-md-2">
   <div class="card-body">
     <h3 class="card-title" role="heading">
-      <a href="{{ SITEURL }}/{{ article.author.url }}" class="card-link">{{ author_info.display }}</a>
+      <a href="{{ article.author.url }}" class="card-link">{{ author_info.display }}</a>
     </h3>
     <div class="row">
       <div class="col-md-3">
         {% if author_info.image %}
-        <img src="{{ SITEURL}}/{{ author_info.image }}" class="card-img author-thumb" alt="">
+        <img src="{{ author_info.image | absolute_url }}" class="card-img author-thumb" alt="">
         {% endif %}
       </div>
       <div class="col-md-8 offset-md-1">

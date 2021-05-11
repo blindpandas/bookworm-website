@@ -2,10 +2,10 @@
     {% for post in posts %}
     <div class="col-12" role="listitem">
       <div class="card p-md-1 m-md-1">
-        <div class="card-body text-black">
+        <div class="card-body">
           <h3 role="heading">
             <a href="{{ SITEURL }}/{{ post.url}}">
-              <span class="text-black">{{ post.title }}</span>
+              {{ post.title }}
             </a>
           </h3>
           <p class="card-subtitle mb-2 text-primary">

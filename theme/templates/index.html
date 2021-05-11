@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 
 {% block page_header %}
-{% include "includes/hero.html" %}
+{% with nav_light = True %}
+{% include "includes/navigation.html" %}
+{% endwith %}
+{% include "partials/home/hero.html" %}
 {% endblock page_header %}
 
 {% block content %}
 
-{% include "includes/featured.html" %}
-{% include "includes/app_highlight.html" %}
+{% include "partials/home/intro.html" %}
+{% include "partials/home/highlights.html" %}
+{% include "partials/home/features.html" %}
 {% include "includes/news_widget.html" %}
 
 {% endblock %}

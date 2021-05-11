@@ -27,3 +27,10 @@ def resize_image(context, image_path, requested_size):
         site_url,
         "/".join(uri_parts)
     )
+
+
+@contextfilter
+def make_absolute_url(context, value):
+    if "://" in value:
+        return value
+    return urljoin(context['SITEURL'], value)

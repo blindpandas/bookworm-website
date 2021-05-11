@@ -5,9 +5,14 @@ import yaml
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path.cwd()))
-from jinja2_utils import resize_image
+from jinja2_utils import resize_image, make_absolute_url
 sys.path.pop(0)
 
+# Some globals
+YAML_CONFIG_INFO = (
+    ("site", "content_info.yaml"),
+    ("releases", "release_info.yaml"),
+)
 
 PATH = 'content'
 AUTHOR = 'Blind Pandas Team'
@@ -17,18 +22,16 @@ SITESUBTITLE = "The universally accessible document reader"
 TIMEZONE = 'Africa/Khartoum'
 DEFAULT_LANG = 'en'
 DEFAULT_CATEGORY  = 'Uncategorised'
+SHOW_SITESUBTITLE_IN_HTML = True
 RELATIVE_URLS = True
 DEVELOPMENT = True
 LOAD_CONTENT_CACHE = False
 DIRECT_TEMPLATES = ['index',]
-JINJA_FILTERS = {'resize_image': resize_image}
-# Extra Content info
-CONTENT_INFO_FILE = Path(__file__).parent / "content_info.yaml"
-with open(CONTENT_INFO_FILE, "r", encoding="utf-8") as file:
-    CONTENT_INFO = yaml.safe_load(file)
-JINJA_GLOBALS = {
-    'site': CONTENT_INFO,
+JINJA_FILTERS = {
+    'resize_image': resize_image,
+    'absolute_url': make_absolute_url
 }
+JINJA_GLOBALS = {}
 
 
 # Re-map URLs
@@ -123,3 +126,8 @@ IMAGE_PATH = 'static/images'
 OG_LOCALE = "en_US"
 HEADER_COVER = "static/images/logo512x512.png"
 
+# Load config from yaml files
+for g_key, filename in YAML_CONFIG_INFO:
+    full_filepath = Path(__file__).parent / filename
+    with open(full_filepath, "r", encoding="utf-8") as file:
+        JINJA_GLOBALS[g_key] = yaml.safe_load(file)

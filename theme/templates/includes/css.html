@@ -1,7 +1,8 @@
-<link rel="stylesheet" href="/{{ THEME_STATIC_DIR }}/vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="/{{ THEME_STATIC_DIR }}/css/style.css">
 {% if DEVELOPMENT %}
+<link rel="stylesheet" href="/{{ THEME_STATIC_DIR }}/vendor/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/{{ THEME_STATIC_DIR }}/vendor/fontawesome-free/css/all.min.css">
 {% else %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/sandstone/bootstrap.min.css" integrity="sha512-XsxfGIdvnQW/g1t0gyABAyAw/xP51TmpK5iXG6vfNEU+5qE+nl/d+NkAKHCcvDSEmgSUJbN65SR9/eZEUkfXIA==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 {% endif %}
+<link rel="stylesheet" href="/{{ THEME_STATIC_DIR }}/css/style.css">
