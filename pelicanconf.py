@@ -71,11 +71,12 @@ THEME  = Path.cwd() / "theme"
 THEME_STATIC_DIR = 'theme'
 
 # Static files
-STATIC_PATHS = ['static', 'extra/CNAME']
+STATIC_PATHS = ['static', 'extra',]
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
+    'extra/update_info.json': {'path': 'update_info.json'},
     'static/*': {'path': 'static/'},
-    'static/images/favicon.ico': {'path': 'favicon.ico'},
+    'static/images/logos/logo.ico': {'path': 'favicon.ico'},
 }
 
 # Plugins

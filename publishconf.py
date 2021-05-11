@@ -12,7 +12,7 @@ from pelicanconf import *
 DEVELOPMENT = False
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = 'https://blindpandas.com'
+SITEURL = 'https://getbookworm.com'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
