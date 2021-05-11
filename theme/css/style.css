@@ -14,7 +14,9 @@ hr {
 hr.light {
   border-color: white;
 }
-
+.bg-bookworm {
+  background-color: #590351 !important;
+}
 .logo {
   border-radius: 25rem;
   width: 40%;
