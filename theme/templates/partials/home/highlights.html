@@ -1,15 +1,15 @@
-<section class="services p-1 p-md-2 m-1 bg-light" aria-label="Highlights">
+<section class="services p-1 p-md-2 m-1 bg-bookworm text-white w-100" aria-label="Highlights">
   <div class="container-fluid d-flex align-items-center flex-column">
     <div class="row text-center">
       <h3 class="sr-only">Highlights</h3>
-      {% for feature in site.featured %}
+      {% for highlight in site.highlights %}
       <div class="col-md-4  d-flex align-items-stretch p-2 mx-auto">
         <div class="icon-box p-1 m-2">
           <div class="icon p-2 text-secondary" role="presentation">
-            <i class="fw fa-5x {{ feature.icon }}"></i>
+            <i class="fw fa-5x {{ highlight.icon }}"></i>
           </div>
-          <h4 class="title h4 pt-2">{{ feature.title }}</h4>
-          <p class="description mx-md-5">{{ feature.text }}</p>
+          <h4 class="title h4 pt-2">{{ highlight.title }}</h4>
+          <p class="description mx-md-5">{{ highlight.text }}</p>
         </div>
       </div>
       {% endfor %}

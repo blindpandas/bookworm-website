@@ -1,0 +1,18 @@
+{% macro render_download_links(release) %}
+<div class="container">
+  <div class="row">
+    <aside class="text-info h5">
+      <p>Note: files containing  the x86 identifier refer to the 32-bit variant, and files containing the x64 identifier refer to the 64-bit variant.</p>
+    </aside>
+    <div class="btn-group-lg" role="group" aria-label="Download Links">
+      {% for file in release.files | user_downloadable_files %}
+      <a href="{{ file.download_url }}" class="btn btn-lg btn-outline-dark m-2">
+        <i class="block fa fa-3x fw fa-download" role="presentation"></i>
+        <br />
+        Download {{ file.filename }} ({{ file.size | filesizeformat }})
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endmacro %}

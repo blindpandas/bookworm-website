@@ -1,0 +1,15 @@
+{% extends "page.html" %}
+
+{% block page_header %}
+
+  {{ super() }}
+<aside class="card m-3" style="width: 20rem;">
+  <div class="card-body">
+    <h5 class="card-title">This user guide is also available in: </h5>
+    {% for translation in page.translations %}
+    <a href="{{ SITEURL }}/{{translation.url}}" class="card-link">{{ translation.lang | lang_display_name }}</a>
+    {% endfor %}
+  </div>
+</aside>
+{% endblock %}
+

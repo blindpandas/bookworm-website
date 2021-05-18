@@ -1,0 +1,40 @@
+<section class="sponsors m-1 m-md-3 bg-light text-dark" aria-label="Sponsors">
+  <div class="container-fluid d-flex align-items-center flex-column">
+    <div class="row text-center m-1 ml-md-3">
+      <div class="card mb-3 mt-4">
+        <div class="card-body w-100">
+          <div class="row">
+            <div class="col-md-5">
+              <h4 class="font-weight-bolder">Bookworm is developed by</h4>
+              <h5>{{ site.developer.name }}</h5>
+              <img src="{{ site.developer.logo }}" class="my-2 d-block img-fluid mx-auto" />
+              <div class="p-1">
+                <p>{{ site.developer.about }}</p>
+                <a class="btn btn-outline-dark" href="{{ site.developer.link.target }}">{{ site.developer.link.label }}</a>
+              </div>
+            </div>
+            <div class="col-md-6 offset-md-1 pt-2 text-left">
+              <h4 class="font-weight-bolder text-center mt-2">Bookworm is supported by</h4>
+              <div class="row">
+                {% for sponsor in site.sponsors %}
+                <div class="col-md-10 ml-md-3">
+                  {% if sponsor.logo %}
+                  <img src="{{ sponsor.logo }}" class="img-fluid" />
+                  {% endif %}
+                  <h4>{{ sponsor.name }}</h4>
+                  <p>{{ sponsor.about }}</p>
+                  <p class="text-muted">{{ sponsor.sponsorship }}</p>
+                  <a class="btn btn-outline-dark" href="{{ sponsor.website}}">
+                    Visit Website
+                    <span class="sr-only"> {{ sponsor.website }}</span>
+                  </a>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

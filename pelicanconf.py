@@ -5,7 +5,12 @@ import yaml
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path.cwd()))
-from jinja2_utils import resize_image, make_absolute_url
+from jinja2_utils import (
+    resize_image,
+    make_absolute_url,
+    user_downloadable_files,
+    lang_display_name,
+)
 sys.path.pop(0)
 
 # Some globals
@@ -29,7 +34,9 @@ LOAD_CONTENT_CACHE = False
 DIRECT_TEMPLATES = ['index',]
 JINJA_FILTERS = {
     'resize_image': resize_image,
-    'absolute_url': make_absolute_url
+    'absolute_url': make_absolute_url,
+    'user_downloadable_files': user_downloadable_files,
+    'lang_display_name': lang_display_name,
 }
 JINJA_GLOBALS = {}
 

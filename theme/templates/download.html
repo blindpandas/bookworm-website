@@ -1,0 +1,77 @@
+{% extends "page.html" %}
+
+{% import 'macros.html' as macros with context %}
+
+{% block head %}
+{{ super() }}
+<style>
+.banner-full .image {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-full .image img {
+  height: 625px;
+}
+
+@media (max-width: 768px) {
+  .banner-full .image {
+    margin-bottom: 30px;
+  }
+}
+
+.banner-full .block {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .banner-full .block {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+.banner-full .block .logo {
+  margin-bottom: 40px;
+}
+
+.banner-full .block h1 {
+  margin-bottom: 40px;
+}
+</style>
+{% endblock%}
+
+{% block page_header %}
+
+  {{ super() }}
+  {% include "partials/home/sponsers_banner.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="section banner-full my-1">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 align-self-center">
+				<div class="block">
+					<div class="logo text-info">
+            <i class="fa fw fa-5x fa-info-circle"></i>
+					</div>
+          {{ page.content }}
+          {% if releases.stable %}
+            <h3>Stable Release</h3>
+            {{ macros.render_download_links(releases.stable) }}
+          {% endif %}
+          {% if releases.dev %}
+            <h3>Development Release</h3>
+            <p>Development releases are great for testing out new features before they land in the stable release.</p>
+            <p>
+            We strongly recommend using the portable variant when testing the beta releases. This way, your system install of Bookworm will not be effected.
+            </p>
+            {{ macros.render_download_links(releases.dev) }}
+          {% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

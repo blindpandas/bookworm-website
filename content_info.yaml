@@ -6,6 +6,8 @@ navigation_menu:
     url: download
   - label: Blog
     url: blog
+  - label: User Guide
+    url: user-guide
 hero:
   image:
     src: static/images/logos/logo128x128.png
@@ -20,9 +22,9 @@ intro:
     Bookworm is a document reader that allows you to read PDF, EPUB, MOBI, and many other document formats using a versatile, yet simple, and highly accessible interface.
     Bookworm provides you with a rich set of tools for reading your documents. You can search the document, bookmark and highlight interesting content, use text-to-speech, and convert scanned documents to plain text using Optical Character Recgonition (OCR).
   right_column_text: |
-    Bookworm is  a free and open-source application for the Windows operating system. It works well with your favorite screen reader such as NVDA and JAWS. Even if no screen reader is active, Bookworm can function as a self-voicing application using its builtin text-to-speech features.
-    Bookworm is being developed by <a href="https://blindpandas.com/">Blind Pandas Team</a>.
-featured:
+    Bookworm runs on Microsoft's Windows operating system. It works well with your favorite screen reader such as NVDA and JAWS. Even if no screen reader is active, Bookworm can function as a self-voicing application using its builtin text-to-speech features.
+    Bookworm is  a free and open-source application, visit our <a href="https://github.com/blindpandas/bookworm">GitHub page</a> to follow Bookworm's development.
+highlights:
   - title: Ubiquitous & Versatile
     icon: fa fa-boxes
     text: Bookworm supports most of the documents formats you may encounter, and it allows you to read them in a simple, versatile interface.
@@ -41,6 +43,23 @@ featured:
   - title: Free & Open-source
     icon: fa fa-laptop-code
     text: Bookworm is a free and open-source application. You can run it, modify it, and learn from it without restrictions.
+features:
+  - icon: fa fa-globe
+    text: Available in 7 languages and counting
+  - icon: fa fa-keyboard
+    text: Use the familiar single letter navigation keys to jump between headings, lists, tables, and quotes
+  - icon: fa fa-search
+    text: Advanced search options, specify search   ranges and use regular expressions
+  - icon: fa fa-microphone-alt
+    text: builtin text-to-speech using SAPI5 and Win10 OneCore speech engine
+  - icon: fa fa-print
+    text: Convert scanned documents to text using Tesseract or the builtin Win10 OCR engine
+  - icon: fa fa-newspaper
+    text: Clean the clutter from web pages and read web articles without adds or interruptions
+  - icon: fa fa-play-circle
+    text: "Different reading modes for different document types, reading a document that contains code? no problem!"
+  - icon: fab fa-wikipedia-w
+    text: search Wikipedia and get an instant definition for any term
 twitter:
   user: blindpandas
   embed:
@@ -52,7 +71,7 @@ authors:
     display: Musharraf Omer
     description: "Musharraf is the founder of Blind Pandas Team and the lead developer of Bookworm, the universally accessible document reader."
     twitter_handle: mush42
-    image: static/images/authors/musharraf.jpg
+    image: /static/images/authors/musharraf64x64.png
 social:
   - label: Twitter
     url: https://twitter.com/blindpandas/
@@ -63,3 +82,21 @@ social:
   - label: Mailing List
     url: https://groups.io/g/bookworm-users
     icon: envelope fa
+developer:
+  name: Blind Pandas Team
+  logo: /static/images/logos/blindpandas128x128.png
+  about: >
+    Blind Pandas Team is a worldwide community of software developers, translators, and other
+    types of makers who want to make the world more accessible through open-source, with the vision of upholding accessibility
+    in words and actions. Connect with us via <a href="https://twitter.com/blindpandas/">Twitter</a>
+  link:
+    label: Learn more
+    target: https://blindpandas.com/
+sponsors:
+  - name: Capeds
+    logo: 
+    website: https://capeds.org
+    about: A Japan based non-profit organization, founded by blind Sudanese professionals to support the education of persons with disabilities in Sudan.
+    sponsorship: >
+      In February 2021 Capeds funded the project's infrastructure for the next
+      three years, and sponsored the integration of Tesseract OCR engine into Bookworm.

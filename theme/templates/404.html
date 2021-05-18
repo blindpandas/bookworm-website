@@ -1,0 +1,44 @@
+{% extends "page.html" %}
+
+{% block head %}
+{{ super() }}
+<style>
+.error-page {
+  height: 100%;
+  width: 100%;
+}
+
+.error-page .center {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-page .center .block h1 {
+  font-size: 200px;
+  font-weight: 400;
+  line-height: 266px;
+  font-family: "Lora", serif;
+}
+
+.error-page .center .block p {
+  margin-bottom: 50px;
+}
+</style>
+{% endblock%}
+
+{% block content %}
+<section class="error-page">
+	<div class="center">
+		<div class="block text-center">
+			<h1>404</h1>
+			<h3>Page Not Found</h3>
+			<p>
+            The link you clicked may be broken or the page may have been removed.
+            </p>
+			<a href="{{ SITEURL }}" class="btn btn-main-md">Go To Home</a>
+		</div>
+	</div>
+</section>
+{% endblock %}

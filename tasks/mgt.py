@@ -1,20 +1,30 @@
 # -*- coding: utf-8 -*-
 
+import requests
+from datetime import datetime
 from pathlib import Path
 from invoke import task
 from invoke.util import cd
+from more_itertools import first_true
 from github import Github
 from yaml import dump
 
-RELEASE_INFO_FILENAME = Path.cwd() / "release_info.yaml"
+ROOT = Path.cwd()
+RELEASE_INFO_FILENAME = ROOT / "release_info.yaml"
 REPO_NAME = "blindpandas/bookworm"
+USER_GUIDE_SRC  = ROOT / "bookworm" / "bookworm" / "resources" / "userguide"
+USER_GUIDE_DST = ROOT / "content" / "pages" / "user-guide"
+USER_GUIDE_SLUG = 'user-guide'
+USER_GUIDE_TEMPLATE = "userguide"
 
-
-@task(name="release-info")
+@task(name="release")
 def update_release_info(c):
     """Pulls release information from GitHub and updates the release file."""
     print("Retrieving release information from GitHub...")
-    github = Github()
+    github = Github(
+        login_or_token=c['github']['github-api-token'],
+        user_agent=c['github']['username']
+    )
     repo = github.get_repo(REPO_NAME)
     releases = repo.get_releases()
     info = {}
@@ -31,6 +41,11 @@ def update_release_info(c):
             if "stable" not in info:
                 info["stable"] = release_info
                 print(f"Found latest stable release: {release_info['title']}")
+    if ("dev" in info) and ("stable" in info ):
+        dev_date = datetime.fromisoformat(info['dev']['metadata']['updated'])
+        stable_date = datetime.fromisoformat(info['stable']['metadata']['updated'])
+        if stable_date > dev_date:
+            info.pop("dev")
     RELEASE_INFO_FILENAME.write_text(dump(info))
     print("Release information updated successfully!")
 
@@ -39,7 +54,7 @@ def get_release_info(release):
     info = dict(
         title=release.title,
         tag=release.tag_name,
-        published=release.published_at.isoformat(),
+        published="" if release.published_at is None else release.published_at.isoformat(),
         url=release.html_url
     )
     files = info.setdefault('files', [])
@@ -49,4 +64,35 @@ def get_release_info(release):
             size=asset.size,
             download_url=asset.browser_download_url
         ))
-    return info if info['files'] else {}
+    if not info['files']:
+        return {}
+    release_info_file = first_true(files, pred=lambda finfo: finfo['filename'].endswith('info.json'))
+    release_metadata = requests.get(release_info_file['download_url']).json()
+    info['metadata'] = release_metadata
+    return info
+
+
+@task(name='userguide')
+def make_user_guide(c):
+    USER_GUIDE_DST.mkdir(parents=True, exist_ok=True)
+    langs = set(
+        item.name
+        for item in USER_GUIDE_SRC.iterdir()
+        if item.is_dir()
+    )
+    for lang in langs:
+        translation = 'true' if lang != 'en' else 'false'
+        md_content = (USER_GUIDE_SRC / lang / "bookworm.md"  ).read_text()
+        localized_title = md_content.strip().splitlines()[0].replace("#", "")
+        outfile = USER_GUIDE_DST / f"user-guide-{lang}.md"
+        file_content = (
+            f"title: {localized_title}\n"
+            f"slug: {USER_GUIDE_SLUG}\n"
+            f"modified: {datetime.utcnow().isoformat()}\n"
+            f"lang: {lang}\n"
+            f"translation: {translation}\n"
+            f"template: {USER_GUIDE_TEMPLATE}\n"
+            f"{ '-' * 15}\n\n"
+        )
+        file_content += md_content
+        outfile.write_text(file_content)

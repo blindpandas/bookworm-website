@@ -1,7 +1,9 @@
 # coding: utf-8
 
 from pathlib import Path, PurePosixPath
+from operator import itemgetter
 from urllib.parse import urljoin
+from babel import Locale as BabelLocale
 from jinja2.filters import contextfilter
 from PIL import Image
 
@@ -34,3 +36,20 @@ def make_absolute_url(context, value):
     if "://" in value:
         return value
     return urljoin(context['SITEURL'], value)
+
+
+def user_downloadable_files(filelist):
+    """Filters the list of release files to only needed ones."""
+    acceptable_suffixes = {'.zip', '.exe'}
+    rv = [
+        file for file in filelist
+        if Path(file['filename']).suffix.lower() in acceptable_suffixes
+    ]
+    rv.sort(key=itemgetter('filename'))
+    return rv
+
+
+@contextfilter
+def lang_display_name(c, lang_code):
+    return BabelLocale.parse(lang_code).display_name
+
