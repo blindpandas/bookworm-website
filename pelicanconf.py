@@ -141,5 +141,8 @@ HEADER_COVER = "static/images/logo512x512.png"
 # Load config from yaml files
 for g_key, filename in YAML_CONFIG_INFO:
     full_filepath = Path(__file__).parent / filename
-    with open(full_filepath, "r", encoding="utf-8") as file:
-        JINJA_GLOBALS[g_key] = yaml.safe_load(file)
+    if full_filepath.exists():
+        with open(full_filepath, "r", encoding="utf-8") as file:
+            JINJA_GLOBALS[g_key] = yaml.safe_load(file)
+    else:
+        JINJA_GLOBALS[g_key] = {}
