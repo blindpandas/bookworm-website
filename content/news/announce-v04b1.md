@@ -28,4 +28,4 @@ This release of Bookworm is supported by [Capeds](https://capeds.org), A Japan b
 
 Thanks to our sponsor, we're able to ensure the sustainability of Bookworm's development during this year. We also created this beautiful, highly accessible website to be the perminant home of Bookworm.
 
-If you or your organization would like to sponsor the project or a specific feature, please [get in touch](https://getbookworm.com/contact/).
+If you or your organization would like to sponsor the project or a specific feature, please [get in touch](https://getbookworm.com/contact-us/).

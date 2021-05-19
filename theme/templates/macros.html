@@ -1,7 +1,10 @@
 {% macro render_download_links(release) %}
 <div class="container">
   <div class="row">
-    <p class="h3">Bookworm version: {{ release.version }}</p>
+    <p class="h3">
+    Bookworm version: {{ release.version }}
+    <a href="{{ SITEURL }}/blog/post/v{{ release.version }}">release announcement</a>
+    </p>
     <aside class="text-info h5">
       <p>Note: files containing  the x86 identifier refer to the 32-bit variant, and files containing the x64 identifier refer to the 64-bit variant.</p>
     </aside>

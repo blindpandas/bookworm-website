@@ -28,7 +28,7 @@
               <div class="col-lg-8 col-md-10 mx-auto">
                   <div class="post-heading">
                       <h1 class="pt-3 text-primary">{{ article.title }}</h1>
-                      <aside>
+                      <aside class="mb-2">
                       <span class="meta">
                           Posted by
                           <a href="{{ SITEURL }}/{{ article.author.url }}">{{ author_info.display }}</a>
@@ -47,7 +47,7 @@
           <div class="row">
               <div class="col-md-9 mx-auto">
               {% if article.cover %}
-                <figure class="text-center">
+                <figure class="text-center w-100 mt-1">
                   <img class"img-fluid" src="{{ SITEURL }}/{{ article.cover }}" alt="Post image">
                 {% if article.cover_caption %}
                   <figcaption class="caption text-primary">{{ article.cover_caption }}</figcaption>
