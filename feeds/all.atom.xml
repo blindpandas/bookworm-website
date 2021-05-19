@@ -1,7 +1,7 @@
 <!--?xml version="1.0" encoding="utf-8"?--><html><head></head><body><feed xmlns="http://www.w3.org/2005/Atom"><title>Bookworm</title><link href="https://getbookworm.com/" rel="alternate"/><link href="https://getbookworm.com/feeds/all.atom.xml" rel="self"/><id>https://getbookworm.com/</id><updated>2021-05-18T03:20:00+02:00</updated><subtitle>The universally accessible document reader</subtitle><entry><title>The first beta of Bookworm version 0.4 is out</title><link href="https://getbookworm.com/blog/post/v0.4b1/" rel="alternate"/><published>2021-05-18T03:20:00+02:00</published><updated>2021-05-18T03:20:00+02:00</updated><author><name>Musharraf</name></author><id>tag:getbookworm.com,2021-05-18:/blog/post/v0.4b1/</id><summary type="html">&lt;p&gt;Announcing The First Beta of Bookworm Version 0.4&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Blind Pandas Team is pleased to announce the immediate availability of the first beta of Bookworm version 0.4.&lt;/p&gt;
 &lt;p&gt;This release of Bookworm has been in the making for over an year. It includes many new features beside performance and stability improvements. Following are some of the new features in this version:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Support for new document formats. This brings the total of supported document formats to 15&lt;/li&gt;
+&lt;li&gt;Support for additional document formats. This brings the total number of supported document formats to 15&lt;/li&gt;
 &lt;li&gt;Support for extracting text from scanned documents using Optical Character Recognition (OCR)&lt;/li&gt;
 &lt;li&gt;Support for navigating structural elements using single-letter navigation commands&lt;/li&gt;
 &lt;li&gt;Support for opening URLs within Bookworm with the ability of extracting the main text of the article&lt;/li&gt;
@@ -12,4 +12,17 @@
 &lt;h2&gt;A New Sponser, A New Website&lt;/h2&gt;
 &lt;p&gt;This release of Bookworm is supported by &lt;a href="https://capeds.org"&gt;Capeds&lt;/a&gt;, A Japan based non-profit organization, founded by blind Sudanese professionals to support the education of persons with disabilities in Sudan. In February 2021 Capeds funded the project's infrastructure for the next three years, and sponsored the integration of Tesseract OCR engine into Bookworm.&lt;/p&gt;
 &lt;p&gt;Thanks to our sponsor, we're able to ensure the sustainability of Bookworm's development during this year. We also created this beautiful, highly accessible website to be the perminant home of Bookworm.&lt;/p&gt;
-&lt;p&gt;If you or your organization would like to sponsor the project or a specific feature, please &lt;a href="https://getbookworm.com/contact-us/"&gt;get in touch&lt;/a&gt;.&lt;/p&gt;</content><category term="news"></category><category term="release"></category><category term="announcement"></category></entry></feed></body></html>
+&lt;p&gt;If you or your organization would like to sponsor the project or a specific feature, please &lt;a href="https://getbookworm.com/contact-us/"&gt;get in touch&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Support for new document formats&lt;/h3&gt;
+&lt;p&gt;In this version of Bookworm we added support for the following document formats, bringing the total number of document types that Bookworm can open to 15:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kindle eBooks of the extensions .mobi, .kf8, and .azw3&lt;/li&gt;
+&lt;li&gt;Microsoft Word 2007 Documents (.docx)&lt;/li&gt;
+&lt;li&gt;PowerPoint presentations (.pptx)&lt;/li&gt;
+&lt;li&gt;Open document text (.otf) and open document presentation (.opf)&lt;/li&gt;
+&lt;li&gt;XPS documents&lt;/li&gt;
+&lt;li&gt;Fiction eBooks (.fb2)&lt;/li&gt;
+&lt;li&gt;Commic book archive (.cbz)&lt;/li&gt;
+&lt;li&gt;Markdown files (.md)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Extracting text using OCR&lt;/h3&gt;</content><category term="news"></category><category term="release"></category><category term="announcement"></category></entry></feed></body></html>
