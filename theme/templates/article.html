@@ -45,11 +45,13 @@
   <div class="article-post">
       <div class="container">
           <div class="row">
-              <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="col-md-9 mx-auto">
               {% if article.cover %}
-                <img class"img-fluid mx-auto" src="{{ SITEURL }}/{{ article.cover }}" alt="" style="max-width: 18rem;max-height: 18rem;">
+                <figure class="text-center">
+                  <img class"img-fluid" src="{{ SITEURL }}/{{ article.cover }}" alt="Post image">
                 {% if article.cover_caption %}
-                  <span class="caption text-primary">{{ article.cover_caption }}</span>
+                  <figcaption class="caption text-primary">{{ article.cover_caption }}</figcaption>
+                </figure>
                 {% endif %}
               {% endif %}
               {{ article.content }}

@@ -1,15 +1,36 @@
 {% extends "page.html" %}
 
-{% block page_header %}
-
+{% block css %}
   {{ super() }}
-<aside class="card m-3" style="width: 20rem;">
-  <div class="card-body">
-    <h5 class="card-title">This user guide is also available in: </h5>
-    {% for translation in page.translations %}
-    <a href="{{ SITEURL }}/{{translation.url}}" class="card-link">{{ translation.lang | lang_display_name }}</a>
-    {% endfor %}
-  </div>
-</aside>
+<link rel="stylesheet" href="/{{ THEME_STATIC_DIR }}/css/blog_post.css">
 {% endblock %}
 
+{% block content %}
+<div class="m-1 m-md-3 center">
+  <div lang="{{ page.lang }}" {% if page.lang is rtl %}dir="rtl" class="text-right"{% endif %}>
+    <article>
+      <!-- Post Content-->
+      <div class="article-post">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-8 col-md-10 mx-auto">
+                  <aside class="card bg-light m-3 pb-2 text-left" dir="ltr" lang="en">
+                    <div class="card-body">
+                      <h5 class="card-title">This user guide is also available in: </h5>
+                      {% for translation in page.translations %}
+                      {% with current = translation.url == page.url %}
+                      <a lang="{{translation.lang}}" href="{{ SITEURL }}/{{translation.url}}" class="card-link" {% if current %}aria-current="page"{% endif %}>{{ translation.lang | lang_display_name }}</a>
+                      {% endwith %}
+                      {% endfor %}
+                    </div>
+                  </aside>
+                  {{ super() }}
+                  <hr />
+                  </div>
+              </div>
+          </div>
+      </div>
+    </article>
+  </div>
+</div>
+{% endblock %}

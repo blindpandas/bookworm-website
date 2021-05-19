@@ -3,6 +3,7 @@
 import requests
 from datetime import datetime
 from pathlib import Path
+from packaging.version import parse as parse_version
 from invoke import task
 from invoke.util import cd
 from more_itertools import first_true
@@ -31,7 +32,7 @@ def update_release_info(c):
     for rel in releases:
         if ("dev" in info) and ("stable" in info ):
             break
-        if not (release_info := get_release_info(rel)):
+        if not (release_info := get_release_info(c, rel)):
             continue
         if rel.prerelease:
             if "dev" not in info:
@@ -42,23 +43,27 @@ def update_release_info(c):
                 info["stable"] = release_info
                 print(f"Found latest stable release: {release_info['title']}")
     if ("dev" in info) and ("stable" in info ):
-        dev_date = datetime.fromisoformat(info['dev']['metadata']['updated'])
-        stable_date = datetime.fromisoformat(info['stable']['metadata']['updated'])
-        if stable_date > dev_date:
+        dev_version = parse_version(info['dev']['version'])
+        stable_version = parse_version(info['stable']['version'])
+        if dev_version < stable_version:
             info.pop("dev")
     RELEASE_INFO_FILENAME.write_text(dump(info))
     print("Release information updated successfully!")
 
 
-def get_release_info(release):
+def get_release_info(c, release):
     info = dict(
         title=release.title,
         tag=release.tag_name,
         published="" if release.published_at is None else release.published_at.isoformat(),
         url=release.html_url
     )
+    assets = {
+        asset.name: asset
+        for asset in release.get_assets()
+    }
     files = info.setdefault('files', [])
-    for asset in release.get_assets():
+    for asset in assets.values():
         files.append(dict(
             filename=asset.name,
             size=asset.size,
@@ -66,8 +71,14 @@ def get_release_info(release):
         ))
     if not info['files']:
         return {}
-    release_info_file = first_true(files, pred=lambda finfo: finfo['filename'].endswith('info.json'))
-    release_metadata = requests.get(release_info_file['download_url']).json()
+    release_info_asset = assets['release-info.json']
+    release_info_url = "https://{token}:@api.github.com/repos/{repo}/releases/assets/{asset_id}".format(
+        token=c['github']['github-api-token'],
+        repo=REPO_NAME,
+        asset_id=release_info_asset.id
+    )
+    release_metadata = requests.get(release_info_url, headers={'Accept': 'application/octet-stream'}).json()
+    info['version'] = release_metadata.pop('version')
     info['metadata'] = release_metadata
     return info
 

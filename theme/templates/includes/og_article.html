@@ -13,14 +13,14 @@
 {% elif HEADER_COVER %}
   {% set default_cover = HEADER_COVER | absolute_url %}
 {% else %}
-  {% set default_cover = SITEURL+"/"+THEME_STATIC_DIR+"/images/post-bg.jpg" %}
+  {% set default_cover = SITEURL + "/static/images/logos/logo320x320.png" %}
 {% endif %}
 
 {# <!-- Choosing description --> #}
 {% if article.headline %}
     {% set description = article.headline %}
 {% elif article.summary %}
-    {% set description = article.summary|striptags|truncate(140) %}
+    {% set description = article.summary|striptags|truncate(200) %}
 {% endif %}
 
 <meta property="og:site_name" content="{{ SITENAME }}"/>

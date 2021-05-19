@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*- #
 
 import yaml
+from datetime import datetime
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path.cwd()))
@@ -10,6 +11,7 @@ from jinja2_utils import (
     make_absolute_url,
     user_downloadable_files,
     lang_display_name,
+    is_rtl,
 )
 sys.path.pop(0)
 
@@ -38,8 +40,10 @@ JINJA_FILTERS = {
     'user_downloadable_files': user_downloadable_files,
     'lang_display_name': lang_display_name,
 }
-JINJA_GLOBALS = {}
-
+JINJA_GLOBALS = {
+    'now': datetime.utcnow()
+}
+JINJA_TESTS  = {'rtl': is_rtl}
 
 # Re-map URLs
 ARTICLE_URL = 'blog/post/{slug}/'

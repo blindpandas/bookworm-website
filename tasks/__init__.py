@@ -16,3 +16,11 @@ ns.add_collection(pelican)
 ns.add_collection(images)
 ns.add_collection(mgt)
 
+@task(
+    pre=(images.default, mgt.update_release_info, mgt.make_user_guide,),
+    post=(pelican.preview, pelican.gh_pages)
+)
+def deploy(c):
+    """Deploys the site."""
+
+ns.add_task(deploy)

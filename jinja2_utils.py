@@ -53,3 +53,5 @@ def user_downloadable_files(filelist):
 def lang_display_name(c, lang_code):
     return BabelLocale.parse(lang_code).display_name
 
+def is_rtl(lang_code):
+    return BabelLocale.parse(lang_code).text_direction == 'rtl'

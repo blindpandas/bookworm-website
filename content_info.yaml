@@ -8,6 +8,8 @@ navigation_menu:
     url: blog
   - label: User Guide
     url: user-guide
+  - label: Contact Us
+    url: contact-us
 hero:
   image:
     src: static/images/logos/logo128x128.png
@@ -19,7 +21,7 @@ hero:
     url: download
 intro:
   left_column_text: |
-    Bookworm is a document reader that allows you to read PDF, EPUB, MOBI, and many other document formats using a versatile, yet simple, and highly accessible interface.
+    Bookworm is a document reader that allows you to read more than 15 document formats including PDF, EPUB, and MOBI using a versatile, yet simple, and highly accessible interface.
     Bookworm provides you with a rich set of tools for reading your documents. You can search the document, bookmark and highlight interesting content, use text-to-speech, and convert scanned documents to plain text using Optical Character Recgonition (OCR).
   right_column_text: |
     Bookworm runs on Microsoft's Windows operating system. It works well with your favorite screen reader such as NVDA and JAWS. Even if no screen reader is active, Bookworm can function as a self-voicing application using its builtin text-to-speech features.
@@ -81,7 +83,7 @@ social:
     icon: github fab
   - label: Mailing List
     url: https://groups.io/g/bookworm-users
-    icon: envelope fa
+    icon: users fa
 developer:
   name: Blind Pandas Team
   logo: /static/images/logos/blindpandas128x128.png
