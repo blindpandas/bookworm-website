@@ -2,10 +2,12 @@ Title: Contact Us
 Slug: contact-us
 ------------------------
 
-<section class="services p-1 p-md-2 m-1 w-100">
+<section class="services m-1 p-4">
   <div class="container-fluid d-flex align-items-center flex-column">
     <div class="row text-center">
-      <h3 class="sr-only">Contact Us</h3>
+      <div class="col-12">
+        <h3>Contact Us</h3>
+      </div>
       <div class="col-md-3 d-flex align-items-stretch p-2 mx-auto">
         <div class="icon-box p-1 m-2">
           <div class="icon p-2 text-secondary" role="presentation">
