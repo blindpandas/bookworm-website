@@ -1,6 +1,6 @@
 title:  Ръководство на потребителя за Bookworm
 slug: user-guide
-modified: 2021-05-19T18:07:16.841716
+modified: 2021-05-19T21:24:20.286055
 lang: bg
 translation: true
 template: userguide

@@ -56,7 +56,9 @@
 					<div class="logo text-info">
             <i class="fa fw fa-5x fa-info-circle"></i>
 					</div>
+          <div class="text-left">
           {{ page.content }}
+          </div>
           {% if releases.stable %}
             <h3>Stable Release</h3>
             {{ macros.render_download_links(releases.stable) }}
