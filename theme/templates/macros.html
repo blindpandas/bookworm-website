@@ -12,17 +12,17 @@
       <table class="table table-striped table-bordered table-sm ">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">File Name</th>
-            <th scope="col">File Size</th>
-            <th scope="col">Download</th>
+            <th scope="col" class="text-left">File Name</th>
+            <th scope="col" class="text-center">File Size</th>
+            <th scope="col" class="text-right">Download</th>
           </tr>
         </thead>
         <tbody>
           {% for file in release.files | user_downloadable_files %}
           <tr>
-            <th scope="row">{{ file.filename }}</th>
-            <td>{{ file.size | filesizeformat }}</td>
-            <td><a href="{{ file.download_url }}" class="btn btn-info btn-sm">Download <span class="sr-only">{{ file.filename }}</span></a></td>
+            <th scope="row" class="text-left">{{ file.filename }}</th>
+            <td class="text-center">{{ file.size | filesizeformat }}</td>
+            <td class="text-right"><a href="{{ file.download_url }}" class="btn btn-info btn-sm">Download <span class="sr-only">{{ file.filename }}</span></a></td>
           </tr>
           {% endfor %}
         </tbody>

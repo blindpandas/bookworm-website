@@ -12,7 +12,7 @@
             Written by<a href="{{ SITEURL }}/{{ post.author.url }}"> {{ post.author }} </a>on {{ post.date|strftime(post.date_format) }}, and filed under<a href="{{ SITEURL }}/{{ SITEURL }}/{{ post.category.url }}"> {{ post.category }}</a>
           </p>
         {% if post.cover %}
-        <img src="{{ SITEURL}}/{{ post.cover }}" class="card-img-top post-cover-preview" alt="{{ post.cover_alt }}">
+        <img src="{{ SITEURL}}/{{ post.cover }}" class="card-img-top" alt="{{ post.cover_alt }}">
         {% endif %}
           <p class="card-text">{{ post.summary }}</p>
           {% if post.tags %}

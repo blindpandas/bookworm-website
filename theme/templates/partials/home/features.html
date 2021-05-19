@@ -1,31 +1,28 @@
-<section class="features p-1 p-md-2 m-1 bg-light text-dark" aria-label="Features">
+<div class="wrapper w-100 bg-bookworm text-white">
+<section class="services p-3 p-md-4 m-1" aria-label="Features">
   <div class="container-fluid d-flex align-items-center flex-column">
-    <div class="row text-center m-1">
-      <div class="card mb-3 mt-4">
-        <div class="card-header">
-          <h3 class="h1">Features at a glance</h3>
-        </div>
-        <div class="card-body w-100">
-          <div class="row ml-md-2">
-            <div class="col-md-8 col-lg-5 m-1">
-              <div class="row">
-                {% for feature in site.features %}
-                <div class="col-sm-12 col-md-4 m-1 d-flex align-items-stretch">
-                  <div class="count-box">
-                    <i class="fa-3x {{ feature.icon }} mb-1"></i>
-                    <p role="heading"><strong>{{ feature.text }}</strong></p>
-                  </div>
-                </div>
-                {% endfor %}
-              </div>
-            </div>
-            <div class="col-md-4 col-lg-4 m-1 m-lg-2">
-              <img src="/static/images/screenshots/bookworm.jpg" class="d-block card-img img-fluid align-self-center mb-2" alt="A screen shot of Bookworm's main window with an open book" />
-              <img src="/static/images/screenshots/bookworm-settings.jpg" class="d-block card-img img-fluid align-self-center m-2" alt="A screenshot of the settings dialog of Bookworm showing the different settings categories."/>
-            </div>
+    <div class="row justify-content-center">
+      <div class="col w-100 p-3">
+        <h3>Features at a glance</h3>
+      </div>
+    </div>
+    <div class="row justify-content-center m-md-2">
+      <div class="col-md-8 text-center mb-2 mx-auto">
+        <img src="/static/images/screenshots/bookworm.jpg" class="img-fluid" alt="A screen shot of Bookworm's main window with an open book" />
+      </div>
+    </div>
+    <div class="row text-center">
+      {% for feature in site.features %}
+      <div class="col-md-3 d-flex align-items-stretch p-3 mx-auto">
+        <div class="icon-box p-1 m-2">
+          <div class="icon p-2 text-light" role="presentation">
+            <i class="fw fa-3x {{ feature.icon }}"></i>
           </div>
+          <p class="description mx-md-5">{{ feature.text }}</p>
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>
+</div>

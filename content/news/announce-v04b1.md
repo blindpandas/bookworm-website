@@ -14,7 +14,7 @@ The Blind Pandas Team is pleased to announce the immediate availability of the f
 
 This release of Bookworm has been in the making for over an year. It includes many new features beside performance and stability improvements. Following are some of the new features in this version:
 
-* Support for new document formats. This brings the total of supported document formats to 15
+* Support for additional document formats. This brings the total number of supported document formats to 15
 * Support for extracting text from scanned documents using Optical Character Recognition (OCR)
 * Support for navigating structural elements using single-letter navigation commands
 * Support for opening URLs within Bookworm with the ability of extracting the main text of the article
@@ -29,3 +29,19 @@ This release of Bookworm is supported by [Capeds](https://capeds.org), A Japan b
 Thanks to our sponsor, we're able to ensure the sustainability of Bookworm's development during this year. We also created this beautiful, highly accessible website to be the perminant home of Bookworm.
 
 If you or your organization would like to sponsor the project or a specific feature, please [get in touch](https://getbookworm.com/contact-us/).
+
+### Support for new document formats
+
+In this version of Bookworm we added support for the following document formats, bringing the total number of document types that Bookworm can open to 15:
+
+* Kindle eBooks of the extensions .mobi, .kf8, and .azw3
+* Microsoft Word 2007 Documents (.docx)
+* PowerPoint presentations (.pptx)
+* Open document text (.otf) and open document presentation (.opf)
+* XPS documents
+* Fiction eBooks (.fb2)
+* Commic book archive (.cbz)
+* Markdown files (.md)
+
+### Extracting text using OCR
+

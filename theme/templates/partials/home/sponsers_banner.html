@@ -13,7 +13,7 @@
                 <a class="btn btn-outline-dark" href="{{ site.developer.link.target }}">{{ site.developer.link.label }}</a>
               </div>
             </div>
-            <div class="col-md-6 offset-md-1 pt-2 text-left">
+            <div class="col-md-6 offset-md-1 pt-2 text-center">
               <h4 class="font-weight-bolder text-center mt-2">Bookworm is supported by</h4>
               <div class="row">
                 {% for sponsor in site.sponsors %}
@@ -24,7 +24,7 @@
                   <h4>{{ sponsor.name }}</h4>
                   <p>{{ sponsor.about }}</p>
                   <p class="text-muted">{{ sponsor.sponsorship }}</p>
-                  <a class="btn btn-outline-dark" href="{{ sponsor.website}}">
+                  <a class="btn btn-outline-dark mb-3" href="{{ sponsor.website}}">
                     Visit Website
                     <span class="sr-only"> {{ sponsor.website }}</span>
                   </a>
@@ -35,7 +35,7 @@
           </div>
           <div class="row">
             <section class="col-md-5 offset-md-3 text-center d-flex align-items-center flex-column" aria-label="Sponsor us!">
-              <h4>If you or your organization would like to sponsor the project or a specific feature, please get in touch</h4>
+              <h4 class="mt-sm-4 mt-md-2">If you or your organization would like to sponsor the project or a specific feature, please get in touch</h4>
               <a href="{{ SITEURL }}/contact-us" class="btn btn-lg btn-info mt-1">Contact Us</a>
             </section>
           </div>
