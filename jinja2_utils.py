@@ -1,9 +1,11 @@
 # coding: utf-8
 
 from pathlib import Path, PurePosixPath
+from datetime import datetime
 from operator import itemgetter
 from urllib.parse import urljoin
 from babel import Locale as BabelLocale
+from babel.dates import format_date
 from jinja2.filters import contextfilter
 from PIL import Image
 
@@ -55,3 +57,9 @@ def lang_display_name(c, lang_code):
 
 def is_rtl(lang_code):
     return BabelLocale.parse(lang_code).text_direction == 'rtl'
+
+
+def formatdatetime(datestring):
+    dt = datetime.fromisoformat(datestring)
+    return format_date(dt, locale="en")
+    

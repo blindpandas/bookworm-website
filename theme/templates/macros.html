@@ -2,7 +2,8 @@
 <div class="container">
   <div class="row">
     <p class="h3">
-    Bookworm version: {{ release.version }}
+    Bookworm version: {{ release.version }},
+    <span class="text-muted">released on {{ release.metadata.updated | formatdatetime }}</span>
     <a href="{{ SITEURL }}/blog/post/v{{ release.version }}">release announcement</a>
     </p>
     <aside class="text-info h5">

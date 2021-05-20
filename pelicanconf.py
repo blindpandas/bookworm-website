@@ -12,6 +12,7 @@ from jinja2_utils import (
     user_downloadable_files,
     lang_display_name,
     is_rtl,
+    formatdatetime,
 )
 sys.path.pop(0)
 
@@ -39,6 +40,7 @@ JINJA_FILTERS = {
     'absolute_url': make_absolute_url,
     'user_downloadable_files': user_downloadable_files,
     'lang_display_name': lang_display_name,
+    'formatdatetime': formatdatetime,
 }
 JINJA_GLOBALS = {
     'now': datetime.utcnow()

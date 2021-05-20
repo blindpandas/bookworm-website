@@ -24,7 +24,7 @@ intro:
     Bookworm is a document reader that allows you to read more than 15 document formats including PDF, EPUB, and MOBI using a versatile, yet simple, and highly accessible interface.
     Bookworm provides you with a rich set of tools for reading your documents. You can search the document, bookmark and highlight interesting content, use text-to-speech, and convert scanned documents to plain text using Optical Character Recgonition (OCR).
   right_column_text: |
-    Bookworm runs on Microsoft's Windows operating system. It works well with your favorite screen reader such as NVDA and JAWS. Even if no screen reader is active, Bookworm can function as a self-voicing application using its builtin text-to-speech features.
+    Bookworm runs on Microsoft Windows operating system. It works well with your favorite screen reader such as NVDA and JAWS. Even if no screen reader is active, Bookworm can function as a self-voicing application using its builtin text-to-speech features.
     Bookworm is  a free and open-source application, visit our <a href="https://github.com/blindpandas/bookworm">GitHub page</a> to follow Bookworm's development.
 highlights:
   - title: Ubiquitous & Versatile

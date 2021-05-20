@@ -15,7 +15,7 @@ Slug: contact-us
           </div>
           <h4 class="title h4 pt-2">Follow us on Twitter</h4>
           <p class="description mx-md-5">Follow us for the latest and greatest</p>
-          <a href="https://twitter.com/blindpandas" class="btn btn-info btn-sm">Follow us</a>
+          <a href="https://twitter.com/blindpandas" class="btn btn-info btn-sm">Follow @blindpandas</a>
         </div>
       </div>
       <div class="col-md-3 d-flex align-items-stretch p-2 mx-auto">
