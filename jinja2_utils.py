@@ -8,7 +8,7 @@ from babel import Locale as BabelLocale
 from babel.dates import format_date
 from jinja2.filters import contextfilter
 from PIL import Image
-
+from readtime import of_html as html_readtime
 
 @contextfilter
 def resize_image(context, image_path, requested_size):
@@ -62,4 +62,8 @@ def is_rtl(lang_code):
 def formatdatetime(datestring):
     dt = datetime.fromisoformat(datestring)
     return format_date(dt, locale="en")
-    
+
+
+@contextfilter
+def readtime(c, html_string):
+    return str(html_readtime(html_string))

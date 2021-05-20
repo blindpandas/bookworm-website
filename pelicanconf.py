@@ -13,6 +13,7 @@ from jinja2_utils import (
     lang_display_name,
     is_rtl,
     formatdatetime,
+    readtime,
 )
 sys.path.pop(0)
 
@@ -41,6 +42,7 @@ JINJA_FILTERS = {
     'user_downloadable_files': user_downloadable_files,
     'lang_display_name': lang_display_name,
     'formatdatetime': formatdatetime,
+    'readtime': readtime,
 }
 JINJA_GLOBALS = {
     'now': datetime.utcnow()
@@ -97,7 +99,6 @@ PLUGIN_PATHS = ('plugins',)
 PLUGINS = (
     'seo',
     'htmlcompress',
-    'readtime',
     'share_post',
     'image_process',
 )

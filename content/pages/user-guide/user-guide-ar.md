@@ -1,6 +1,6 @@
 title:  دليل استخدام Bookworm
 slug: user-guide
-modified: 2021-05-20T06:23:31.086838
+modified: 2021-05-20T09:23:48.946825
 lang: ar
 translation: true
 template: userguide

@@ -33,6 +33,7 @@
                           Posted by
                           <a href="{{ SITEURL }}/{{ article.author.url }}">{{ author_info.display }}</a>
                           on <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+                          <span class="text-info"> &middot; {{ article.content | readtime }}</span>
                       </span>
                       {% include "partials/article/share.html" with context %}
                   </aside>

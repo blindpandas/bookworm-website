@@ -1,6 +1,6 @@
 title:  Bookworm User Guide
 slug: user-guide
-modified: 2021-05-20T06:23:30.647024
+modified: 2021-05-20T09:23:48.946825
 lang: ja
 translation: true
 template: userguide
