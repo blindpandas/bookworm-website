@@ -13,7 +13,7 @@ cover_caption: The late Spanish Novelist Carlos Ruiz Zafon.  Source: Wikipedia
 
 The Blind Pandas Team is pleased to announce the immediate availability of the first beta of Bookworm version 0.4.
 
-This release of Bookworm has been in the making for over an year. It includes many new features beside performance and stability improvements. Following are some of the new features in this version:
+This release of Bookworm has been in the making for over a year. It includes many new features beside performance and stability improvements. Following are some of the new features in this version:
 
 * Support for additional document formats. This brings the total number of supported document formats to 15
 * Support for extracting text from scanned documents using Optical Character Recognition (OCR)
