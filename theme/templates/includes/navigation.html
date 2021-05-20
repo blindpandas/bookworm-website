@@ -20,7 +20,7 @@
         {% set current = False %}
         {% endif %}
         <li class="nav-item {% if current %}active{% endif %}">
-          <a class="nav-link" href="{{ nav.url| absolute_url }}" {% if current %}aria-current="page"{% endif %}>{{ nav.label }}</a>
+          <a class="nav-link" href="{{ nav.url | absolute_url }}" {% if current %}aria-current="page"{% endif %}>{{ nav.label }}</a>
         </li>
       {% endfor %}
       </ul>

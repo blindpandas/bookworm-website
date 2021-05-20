@@ -20,7 +20,8 @@
 
 {% block content %}
 {% set author_info = site.authors.get(article.author |string) %}
-<article>
+{% set article_is_rtl = article.lang is rtl %}
+<article lang="{{ article.lang }}" {% if article_is_rtl %}dir="rtl" class="text-right"{% endif %}>
   <!-- Page Header-->
   <header class="mt-4">
       <div class="container">
