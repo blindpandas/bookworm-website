@@ -34,8 +34,8 @@ Slug: contact-us
             <i class="fa fw fa-5x fa-envelope"></i>
           </div>
           <h4 class="title h4 pt-2">Send us an email</h4>
-          <p class="description mx-md-5">Contact <a href="https://blindpandas.com">Blind Pandas Team</a> for sponsorship, press/media, and any other urgent issues</p>
-          <a href="mailto:info@blindpandas.com" class="btn btn-outline-dark btn-sm">Get in touch</a>
+          <p class="description mx-md-5">Contact <a href="https://blindpandas.org">Blind Pandas Team</a> for sponsorship, press/media, and any other urgent issues</p>
+          <a href="mailto:info@blindpandas.org" class="btn btn-outline-dark btn-sm">Get in touch</a>
         </div>
       </div>
     </div>
