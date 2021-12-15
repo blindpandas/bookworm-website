@@ -30,6 +30,8 @@ def update_release_info(c):
     releases = repo.get_releases()
     info = {}
     for rel in releases:
+        if rel.published_at is None:
+            continue
         if ("dev" in info) and ("stable" in info ):
             break
         if not (release_info := get_release_info(c, rel)):
