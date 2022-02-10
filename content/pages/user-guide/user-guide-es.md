@@ -1,6 +1,6 @@
 title:  Manual de Usuario de Bookworm
 slug: user-guide
-modified: 2022-01-19T20:58:51.411406
+modified: 2022-01-19T21:36:19.383656
 lang: es
 translation: true
 template: userguide
